@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    @apply font-redHat font-normal text-base bg-rose50 py-5;
+}
+
+.wrapper {
+    @apply w-5/6 mx-auto px-10 grid grid-cols-12 gap-5;
+}
+
+/* PRODUCTS */
+.products {
+    @apply grid grid-cols-3 gap-5;
+}
+.products__side {
+    @apply col-span-9;
+}
+
+.products__side h3 {
+    @apply text-4xl mb-8 font-bold;
+}
+
+.product {
+    &__img__wrapper {
+        @apply relative;
+    }
+    
+    &__img {
+        @apply w-full rounded-lg;
+    }
+    
+    &__add_to_cart {
+        @apply absolute left-1/2 -bottom-4 -translate-x-1/2 flex justify-center items-center gap-3 font-medium border border-rose500 p-3 w-3/4 bg-white rounded-full cursor-pointer hover:border-red hover:text-red;
+    }
+    
+    &__manage {
+        @apply absolute left-1/2 -bottom-4 -translate-x-1/2 flex justify-between items-center p-3 w-3/4 gap-3 bg-red rounded-full text-white;
+    }
+    
+    &__decrement,
+    &__increment {
+        @apply outline-none border border-white h-5 w-5 flex items-center justify-center rounded-full cursor-pointer hover:bg-white;
+    }
+    
+    &__info__wrapper {
+        @apply mt-6;
+    }
+    
+    &__category {
+        @apply text-sm text-[#9a9a9a];
+    }
+    
+    &__name {
+        @apply font-medium text-base;
+    }
+    
+    &__price {
+        @apply text-red font-medium text-sm;
+    }
+}
+
+
+/* CART */
+.cart__side {
+    @apply col-span-3;
+}
+
+.cart {
+    @apply p-8 bg-white rounded-lg;
+
+    & h4 {
+        @apply text-xl text-red font-bold mb-5;
+    }
+    
+    &__empty {
+        @apply flex items-center justify-center flex-col gap-5;
+    }
+    
+    &__empty p {
+        @apply text-sm text-rose500;
+    }
+
+    &__item {
+        @apply flex items-center justify-between py-2;
+
+        &:not(:last-child) {
+            @apply border-b border-gray-200;
+        }
+
+        &__name {
+            @apply font-medium;
+        }
+
+        &__info {
+            @apply flex items-center gap-3 text-sm;
+        }
+
+        &__count {
+            @apply text-red font-medium;
+        }
+        
+        &__price {
+            @apply text-[#9a9a9a] text-sm;
+        }
+
+        &__total {
+            @apply text-rose500 text-sm font-medium;
+        }
+
+        &__remove {
+            @apply border border-rose400 rounded-full p-1 hover:border-rose900;
+        }
+    }
+}
