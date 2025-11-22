@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "RedHatText";
+  src: url("/src/assets/fonts/RedHatText-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* variable font weight range */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RedHatText";
+  src: url("/src/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@import "tailwindcss";
+
+@theme {
+  --default-font-family: "RedHatText", sans-serif;
+
+  --color-customRed: hsl(14, 86%, 42%);
+  --color-customGreen: hsl(159, 69%, 38%);
+
+  --color-customRose50: hsl(20, 50%, 98%);
+  --color-customRose100: hsl(13, 31%, 94%);
+  --color-customRose300: hsl(14, 25%, 72%);
+  --color-customRose400: hsl(7, 20%, 60%);
+  --color-customRose500: hsl(12, 20%, 44%);
+  --color-customRose900: hsl(14, 65%, 9%);
+}
+
+@layer base {
+  body {
+    @apply bg-customRose50;
+  }
+}
