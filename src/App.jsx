@@ -57,7 +57,7 @@ function App() {
       modalShown &&
       <div className="fixed w-full h-full bg-black/40 flex items-end md:items-center justify-center z-10">
         <div className='bg-white p-8 rounded-t-lg md:rounded-lg w-screen md:w-lg flex flex-col max-h-11/12'>
-          <img src="/assets/images/icon-order-confirmed.svg" className='size-10' />
+          <img src="assets/images/icon-order-confirmed.svg" className='size-10' />
           <h2 className='text-3xl mt-5 font-bold'>Order Confirmed</h2>
           <p className='text-customRose400 text-sm mt-2'>We hope you enjoy your food!</p>
 
@@ -111,11 +111,11 @@ function App() {
                         {
                           desserts[index].cartCount > 0
                           ? <div className='bg-customRed flex items-center justify-between gap-3 px-5 py-3 min-w-4/6 rounded-full text-white'>
-                            <button className='w-5 h-5 rounded-full border border-white flex items-center justify-center hover:bg-white group transition-colors cursor-pointer' onClick={() => handleCart('sub', dessert.name)}><img src="/assets/images/icon-decrement-quantity.svg" className='group-hover:hidden' /><img src="/assets/images/icon-decrement-quantity-filled.svg" className='hidden group-hover:inline' /></button>
+                            <button className='w-5 h-5 rounded-full border border-white flex items-center justify-center hover:bg-white group transition-colors cursor-pointer' onClick={() => handleCart('sub', dessert.name)}><img src="assets/images/icon-decrement-quantity.svg" className='group-hover:hidden' /><img src="assets/images/icon-decrement-quantity-filled.svg" className='hidden group-hover:inline' /></button>
                             {desserts[index].cartCount}
-                            <button className='w-5 h-5 rounded-full border border-white flex items-center justify-center hover:bg-white group transition-colors cursor-pointer' onClick={() => handleCart('add', dessert.name)}><img src="/assets/images/icon-increment-quantity.svg" className='group-hover:hidden' /><img src="/assets/images/icon-increment-quantity-filled.svg" className='hidden group-hover:inline' /></button>
+                            <button className='w-5 h-5 rounded-full border border-white flex items-center justify-center hover:bg-white group transition-colors cursor-pointer' onClick={() => handleCart('add', dessert.name)}><img src="assets/images/icon-increment-quantity.svg" className='group-hover:hidden' /><img src="assets/images/icon-increment-quantity-filled.svg" className='hidden group-hover:inline' /></button>
                           </div>
-                          : <button className='w-full flex justify-center gap-2 items-center bg-white py-3 px-5 border border-customRed text-gray-700 hover:text-customRed text-sm rounded-full font-semibold cursor-pointer transition-colors' onClick={() => handleCart('add', dessert.name)}><img src="/assets/images/icon-add-to-cart.svg" /> Add to Cart</button>
+                          : <button className='w-full flex justify-center gap-2 items-center bg-white py-3 px-5 border border-customRed text-gray-700 hover:text-customRed text-sm rounded-full font-semibold cursor-pointer transition-colors' onClick={() => handleCart('add', dessert.name)}><img src="assets/images/icon-add-to-cart.svg" /> Add to Cart</button>
                         }
                       </div>
                     </div>
@@ -145,7 +145,7 @@ function App() {
                       <p className='font-semibold text-customRose500'>${dessert.price * dessert.cartCount}</p>
                     </div>
                   </div>
-                  <button className='opacity-60 hover:opacity-100 transition-opacity size-4 flex items-center justify-center border border-customRed rounded-full cursor-pointer' onClick={() => handleCart('remove', dessert.name)}><img src="/assets/images/icon-remove-item.svg" /></button>
+                  <button className='opacity-60 hover:opacity-100 transition-opacity size-4 flex items-center justify-center border border-customRed rounded-full cursor-pointer' onClick={() => handleCart('remove', dessert.name)}><img src="assets/images/icon-remove-item.svg" /></button>
                 </div>
               ))
               }
@@ -155,14 +155,14 @@ function App() {
               </div>
 
               <div className='bg-customRose100 flex justify-center gap-2 items-center rounded-lg p-5'>
-                <img src="/assets/images/icon-carbon-neutral.svg" />
+                <img src="assets/images/icon-carbon-neutral.svg" />
                 <p className='text-xs'>This is a <b>carbon-neutral</b> delivery</p>
               </div>
               
               <button className='px-5 py-3 bg-customRed text-white text-sm w-full font-semibold rounded-full mt-5 cursor-pointer' onClick={() => setModalShown(true)}>Confirm Order</button>
               </> :
               <>
-                <img className='w-1/2 mx-auto' src='/assets/images/illustration-empty-cart.svg' />
+                <img className='w-1/2 mx-auto' src='assets/images/illustration-empty-cart.svg' />
                 <p className='text-center text-customRose500 font-semibold text-sm mt-5'>Your cart items will appear here!</p>
               </>
             }
